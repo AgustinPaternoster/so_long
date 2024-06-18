@@ -9,7 +9,9 @@
 /*   Updated: 2024/03/07 12:42:43 by apaterno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../inc/get_next_line.h"
+//#include "../inc/get_next_line.h"
+
+#include "../inc/so_long.h"
 
 char	*lstnextnode(t_list *node)
 {

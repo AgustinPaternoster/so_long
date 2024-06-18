@@ -1,6 +1,6 @@
 #include "../inc/so_long.h"
 
-int main (void)
+int main (int arc,char *argv)
 {
     
     return (0);

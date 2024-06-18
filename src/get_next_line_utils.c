@@ -9,7 +9,8 @@
 /*   Updated: 2024/03/07 12:39:20 by apaterno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../inc/get_next_line.h"
+//#include "../inc/get_next_line.h"
+#include "../inc/so_long.h"
 
 t_list	*checkline(t_list *lista)
 {
