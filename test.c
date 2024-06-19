@@ -1,22 +1,34 @@
-#include "./inc/so_long.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-typedef struct	s_vars {
-	void	*mlx;
-	void	*win;
-}				t_vars;
-
-int	close(int keycode, t_vars *vars)
+void fn_chkarg(int arc, char **argv)
 {
-	mlx_destroy_window(vars->mlx, vars->win);
-	return (0);
+    int i;
+    char *maps;
+
+    if (arc != 2)
+    {
+        printf("Numero de parametros incorrectos\n");
+        exit(1);
+    }
+    
+    maps = argv[1];
+    i = 0;
+    while(maps[i] && maps[i] != '.')
+        i++;
+    if(maps[i + 1] == 'b' && maps[i + 2] == 'e' && maps[i + 3] == 'r' && maps[i + 4] == '\0')
+    
+	else
+	{
+        printf("Archivo incorrecto\n");
+        exit(1);
+    };
 }
 
-int	main(void)
+int main(int arc, char **argv)
 {
-	t_vars	vars;
-
-	vars.mlx = mlx_init();
-	vars.win = mlx_new_window(vars.mlx, 1920, 1080, "Hello world!");
-	mlx_hook(vars.win, 2, 1L<<0, close, &vars);
-	mlx_loop(vars.mlx);
+	fn_chkarg(arc,argv);
+	printf("ok");
+	return(0);
 }

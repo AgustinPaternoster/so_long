@@ -1,7 +1,7 @@
 CC = gcc
 INCLUDE = -I ./inc/
 CFLAGS = -Wall -Werror -Wextra
-CFILES = main.c\
+CFILES = main_test.c\
 		get_next_line_utils.c\
 		get_next_line.c\
 		fn_utilities.c\

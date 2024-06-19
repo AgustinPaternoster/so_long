@@ -1,28 +1,19 @@
 int close_1(int keycode, t_game *game)
 {
+    ft_printf("hola");
     mlx_destroy_window(game->mlx,game->mlx_win);
     return (0);
 }
-
-void init_game(t_game *game)
-{
-    game->mlx = mlx_init();
-    game->mlx_win = mlx_new_window(game->mlx, 500 , 500 , "hola mundo");
-    
-    
-}
-
 
 
 int main (int arc, char **argv)
 {
     t_game newgame;
 
-
+    
     newgame.mlx = mlx_init();
     newgame.mlx_win = mlx_new_window(newgame.mlx, 500 , 500 , "hola mundo");
+    mlx_hook(newgame.mlx_win, 2 ,1L<<0, close_1 ,&newgame );
     mlx_loop(newgame.mlx);
-    mlx_hook(newgame.mlx, 2 ,0L,close_1 ,&newgame );
     
-
 }
